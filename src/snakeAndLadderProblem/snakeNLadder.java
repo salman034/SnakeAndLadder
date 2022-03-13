@@ -7,20 +7,21 @@ public class snakeNLadder {
             int DIES = (int)((Math.random() * 10) % 6) +1;
             System.out.println("Start position: " + DIES);
 
-            int check = (int)(Math.random() * 3 + 1);
+            int check = (int)(Math.random() * 3 );
             if(check == LADDER) {
                 player = player + DIES;
-                System.out.println("Player position :" + player);
+                if(player >100)
+                    player -= DIES;
+                System.out.println("Player won: " + player);
             }
                 else if (check == SNAKE)
                     player = player - DIES;
-
                     if(player < 0)
                         player = 0;
-                    else {
-                        player = player + DIES;
-                    }
-            System.out.println("Position of Player: " + player);
+            else {
+                player = player + DIES;
+            }
+            System.out.println("Player won: " + player);
         }
     }
 }
