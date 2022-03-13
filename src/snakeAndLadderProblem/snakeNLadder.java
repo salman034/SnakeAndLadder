@@ -14,12 +14,10 @@ public class snakeNLadder {
             }
                 else if (check == SNAKE)
                     player = player - DIES;
-
-                    if(player < 0)
-                        player = 0;
-                    else {
-                        player = player + DIES;
-                    }
+            
+             else {
+                   player = player + DIES;
+                  }
             System.out.println("Position of Player: " + player);
         }
     }
